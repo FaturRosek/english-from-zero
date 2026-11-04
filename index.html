@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>English From Zero — Belajar Bahasa Inggris dari Nol</title>
+    <meta
+      name="description"
+      content="Aplikasi belajar bahasa Inggris mandiri dari level A0 dengan penjelasan Bahasa Indonesia dan latihan percakapan AI."
+    />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/components.css" />
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+  </head>
+  <body>
+    <div class="app-shell" id="app-shell">
+      
+      <a href="#app-content" class="skip-link">Langsung ke konten</a>
+      
+      <div
+        class="sidebar-overlay"
+        id="sidebar-overlay"
+        aria-hidden="true"
+      ></div>
+
+      
+      <aside class="app-sidebar" id="app-sidebar" aria-label="Navigasi Utama">
+        <div class="sidebar-brand">
+          <div class="brand-logo" aria-hidden="true">EZ</div>
+          <div class="brand-text">
+            <span class="brand-title">English From Zero</span>
+            <span class="brand-subtitle">A0 ke Komunikasi Kerja</span>
+          </div>
+          <button
+            type="button"
+            class="sidebar-close-btn"
+            id="sidebar-close-btn"
+            aria-label="Tutup menu navigasi"
+          >
+            &#10005;
+          </button>
+        </div>
+
+        <div class="sidebar-user-card" id="sidebar-user-card">
+          <div class="user-card-row">
+            <span class="user-greeting" id="sidebar-learner-name"
+              >Pembelajar</span
+            >
+            <span class="level-badge" id="sidebar-level-badge">Level A0</span>
+          </div>
+          <p class="user-card-caption">Belajar fleksibel sesuai ritme Anda</p>
+        </div>
+
+        <nav class="sidebar-nav" aria-label="Daftar Modul">
+          <ul class="nav-list" id="nav-list">
+            <li class="nav-item">
+              <button
+                type="button"
+                class="nav-link active"
+                data-route="dashboard"
+              >
+                <span class="nav-icon" aria-hidden="true">&#127968;</span>
+                <span class="nav-label">Dashboard</span>
+              </button>
+            </li>
+            <li class="nav-item">
+              <button type="button" class="nav-link" data-route="learning-path">
+                <span class="nav-icon" aria-hidden="true">&#128218;</span>
+                <span class="nav-label">Learning Path</span>
+              </button>
+            </li>
+            <li class="nav-item">
+              <button type="button" class="nav-link" data-route="vocabulary">
+                <span class="nav-icon" aria-hidden="true">&#128221;</span>
+                <span class="nav-label">Vocabulary</span>
+              </button>
+            </li>
+            <li class="nav-item">
+              <button type="button" class="nav-link" data-route="grammar">
+                <span class="nav-icon" aria-hidden="true">&#129513;</span>
+                <span class="nav-label">Grammar</span>
+              </button>
+            </li>
+            <li class="nav-item">
+              <button type="button" class="nav-link" data-route="listening">
+                <span class="nav-icon" aria-hidden="true">&#127911;</span>
+                <span class="nav-label">Listening</span>
+              </button>
+            </li>
+            <li class="nav-item">
+              <button
+                type="button"
+                class="nav-link"
+                data-route="speaking-practice"
+              >
+                <span class="nav-icon" aria-hidden="true">&#127908;</span>
+                <span class="nav-label">Speaking Practice</span>
+              </button>
+            </li>
+            <li class="nav-item">
+              <button
+                type="button"
+                class="nav-link nav-link-highlight"
+                data-route="ai-conversation"
+              >
+                <span class="nav-icon" aria-hidden="true">&#129302;</span>
+                <span class="nav-label">AI Conversation</span>
+                <span class="nav-pill">Inti</span>
+              </button>
+            </li>
+            <li class="nav-item">
+              <button
+                type="button"
+                class="nav-link"
+                data-route="workplace-english"
+              >
+                <span class="nav-icon" aria-hidden="true">&#128188;</span>
+                <span class="nav-label">Workplace English</span>
+              </button>
+            </li>
+            <li class="nav-item">
+              <button
+                type="button"
+                class="nav-link"
+                data-route="progress-review"
+              >
+                <span class="nav-icon" aria-hidden="true">&#128200;</span>
+                <span class="nav-label">Progress &amp; Review</span>
+              </button>
+            </li>
+            <li class="nav-item">
+              <button type="button" class="nav-link" data-route="settings">
+                <span class="nav-icon" aria-hidden="true">&#9881;</span>
+                <span class="nav-label">Settings</span>
+              </button>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="sidebar-footer">
+          <div class="storage-indicator" id="storage-indicator">
+            <span class="status-dot status-ok" id="storage-status-dot"></span>
+            <span class="storage-status-text" id="storage-status-text"
+              >Data Lokal Aktif (v1.0.0)</span
+            >
+          </div>
+        </div>
+      </aside>
+
+      
+      <div class="app-main">
+        
+        <header class="app-header">
+          <div class="header-left">
+            <button
+              type="button"
+              class="mobile-menu-btn"
+              id="mobile-menu-btn"
+              aria-label="Buka menu navigasi"
+              aria-expanded="false"
+            >
+              &#9776;
+            </button>
+            <div class="header-titles">
+              <h1 class="page-title" id="page-title">Dashboard</h1>
+              <p class="page-subtitle" id="page-subtitle">
+                Ringkasan progres belajar dan langkah berikutnya
+              </p>
+            </div>
+          </div>
+          <div class="header-right">
+            <button
+              type="button"
+              class="theme-toggle-btn"
+              id="theme-toggle"
+              aria-label="Ganti tema tampilan"
+              title="Ganti tema"
+            >
+              &#9789;
+            </button>
+            <span
+              class="connection-badge"
+              id="connection-badge"
+              title="Status koneksi internet saat ini"
+            >
+              Memeriksa koneksi...
+            </span>
+            <button
+              type="button"
+              class="btn btn-secondary btn-sm"
+              id="header-ai-btn"
+              data-route-target="ai-conversation"
+            >
+              Latihan Bicara AI
+            </button>
+          </div>
+        </header>
+
+        
+        <main class="app-content" id="app-content" tabindex="-1">
+          <noscript>
+            <div class="alert alert-error">
+              Aplikasi ini membutuhkan JavaScript agar dapat berjalan. Silakan
+              aktifkan JavaScript pada browser Anda.
+            </div>
+          </noscript>
+          
+        </main>
+
+        
+        <footer class="app-footer">
+          <span
+            >English From Zero &bull; v1.0 &mdash; Finalized &amp; Ready</span
+          >
+          <span
+            >Pengantar Bahasa Indonesia &bull; Berjalan Lokal via
+            <code>index.html</code></span
+          >
+        </footer>
+      </div>
+    </div>
+
+    
+    <script src="data/levels.js"></script>
+    <script src="data/lessons-a0.js"></script>
+    <script src="data/vocabulary-a0.js"></script>
+    <script src="data/grammar-a0.js"></script>
+    <script src="data/quizzes-a0.js"></script>
+    <script src="data/conversations.js"></script>
+    <script src="data/workplace.js"></script>
+    
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>
